@@ -43,21 +43,21 @@ export default function LoginForm() {
     console.log('Value Retrieved: ' + value);
   }
 
-  const changeAndSavePassword = async (text) => {
-    SetPassword(text);
-    await AsyncStorage.setItem('password',password);
-  }
+//   const changeAndSavePassword = async (text) => {
+//     SetPassword(text);
+//     await AsyncStorage.setItem('password',password);
+//   }
 
-  const login = () => {
-    if (email == 'admin@gmail.com' && password == 'admin123') {
-      console.log('Correct credentials, taking to dashboard');
-      navigation.navigate('dashboard');      
-    }
-    else {
-      console.log('Incorrect credentials, printing an alert');
-      Alert.alert('Incorrect Credentials', 'please provide correct credentials');
-    }
-  }
+//   const login = () => {
+//     if (email == 'admin@gmail.com' && password == 'admin123') {
+//       console.log('Correct credentials, taking to dashboard');
+//       navigation.navigate('dashboard');      
+//     }
+//     else {
+//       console.log('Incorrect credentials, printing an alert');
+//       Alert.alert('Incorrect Credentials', 'please provide correct credentials');
+//     }
+//   }
 
   const loginWithFirebase = async () => {
     try {
@@ -71,6 +71,7 @@ export default function LoginForm() {
       }
     } catch (error) {
       console.log('Authentication error');
+      Alert.alert('Incorrect Credentials', 'please provide correct credentials');
     }
   }
 
@@ -80,6 +81,7 @@ export default function LoginForm() {
       console.log('User creation successful');
     } catch (error) { 
       console.log('User creation unsuccessful');
+      Alert.alert('Incorrect Credentials', 'please provide correct credentials');
     }
   }
 
