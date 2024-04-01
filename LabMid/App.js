@@ -3,10 +3,15 @@ import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-global.d1 = '#35374B'
-global.d2 = '#344955'
-global.d3 = '#50727B'
-global.l1 = '#78A083'
+// global.d1 = '#35374B'
+// global.d2 = '#344955'
+// global.d3 = '#50727B'
+// global.l1 = '#78A083'
+
+global.d1 = '#2B2E4A'
+global.d2 = '#53354A'
+global.d3 = '#903749'
+global.l1 = '#E84545'
 
 import LoginForm from './Login';
 import SignUpForm from './Signup';
