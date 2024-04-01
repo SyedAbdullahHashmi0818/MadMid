@@ -17,6 +17,7 @@ import LoginForm from './Login';
 import SignUpForm from './Signup';
 import Dashboard from './Dashboard';
 import HomePage from './Home';
+import Main from './MainPage';
 
 export default function App() {
 
@@ -25,6 +26,25 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
+      <Stack.Screen 
+          name='main'
+          component={Main}
+          options={{
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: global.d2
+            },
+            headerShadowVisible : true,
+            headerTitle: "Quran App",
+            headerTitleAlign: "center",
+            headerTitleStyle: {
+              color: global.l1
+            },
+            headerTintColor : global.d1
+          }}
+        />  
+
 
         <Stack.Screen 
           name='login'
